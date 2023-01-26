@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+body {
+  font-family: Poppins, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+  --bg-1: #f8f8ff;
+  --bg-2: #ecedf6;
+  --bg-3: #cccdde;
+  --black-1: #646681;
+  --black-2: #585858;
+  --gray-2: #dedfe1;
+  --primary-purple: #646ff0;
+  --white: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
+body {
+  background-color: var(--bg-1);
+  width: 100%;
   min-height: 100vh;
+}
+
+.page-wrapper {
+  max-width: 1200px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+h1.page-title {
+  color: var(--black-1);
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 2rem auto 1.5rem;
+  width: 100%;
+}
+
+.top-row {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  height: 60px;
   align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 6px;
+  color: var(--white);
+  background-color: var(--primary-purple);
+  border: none;
+  padding: 0.6rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.tasklog-dropdown {
+  background: #cccdde;
+  border: none;
+  border-radius: 6px;
+  color: var(--black-2);
+  cursor: pointer;
+  padding: 0.6rem;
+  width: 150px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.content-row {
+  background-color: var(--bg-2);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+p.empty-text {
+  background-color: var(--gray-2);
+  border-radius: 8px;
+  color: var(--black-2);
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0 auto;
+  width: max-content;
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+
+.modal-wrapper {
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.modal-cover {
+  background-color: var(--bg-2);
+  border-radius: 8px;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn.btn-cancel {
+  background-color: var(--bg-3);
+}
+
+.scroll-lock {
+  overflow: hidden;
+  margin-right: 17px;
 }
